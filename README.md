@@ -111,10 +111,3 @@ aws cloudformation delete-stack --stack-name language-translation
 See the [AWS SAM developer guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) for an introduction to SAM specification, the SAM CLI, and serverless application concepts.
 
 Next, you can use AWS Serverless Application Repository to deploy ready to use Apps that go beyond hello world samples and learn how authors developed their applications: [AWS Serverless Application Repository main page](https://aws.amazon.com/serverless/serverlessrepo/)
-
-aws ecr create-repository --repository-name language-translation --image-scanning-configuration scanOnPush=true --region us-east-1
-
-# Register docker to ECR
-aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 007131727995.dkr.ecr.us-east-1.amazonaws.com
-
-uri 007131727995.dkr.ecr.us-east-1.amazonaws.com/language-translation
